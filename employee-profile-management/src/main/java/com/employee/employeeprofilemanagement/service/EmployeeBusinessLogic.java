@@ -1,6 +1,7 @@
 package com.employee.employeeprofilemanagement.service;
 
 import com.employee.employeeprofilemanagement.data.Employee;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
  public interface EmployeeBusinessLogic {
@@ -14,7 +15,7 @@ import java.util.List;
 
         Employee updateEmployeeById(int eId,Employee employee) throws Exception;
 
-        String deleteEmployeeById(int eId);
+        ResponseEntity<Employee> deleteEmployeeById(int eId);
 
         Employee findByName(String eName);
 

@@ -36,7 +36,7 @@ public class EmployeeRestController {
         return employeeBusinessLogic.getEmployeeById(eId);
     }
 
-    @GetMapping("{eName}/")
+    @GetMapping("name/{eName}")
     public  Employee getEmployeeByName(@PathVariable String eName){
         return employeeBusinessLogic.findByName(eName);
 
